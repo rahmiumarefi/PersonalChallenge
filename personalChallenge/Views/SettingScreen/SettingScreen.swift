@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SettingView: View {
+struct SettingScreen: View {
         @Binding var isPresented:Bool
         @Binding var setting:QuestionType
         @State var isShowingAlert = false
@@ -63,7 +63,7 @@ struct SettingView: View {
     
     struct SettingScreen_Previews: PreviewProvider {
         static var previews: some View {
-            SettingView(isPresented: .constant(false),setting: .constant(QuestionType(isBilangan: true,isCerita: false,isGambar: false)))
+            SettingScreen(isPresented: .constant(false),setting: .constant(QuestionType(isBilangan: true,isCerita: false,isGambar: false)))
         }
     }
 
