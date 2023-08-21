@@ -7,41 +7,6 @@
 
 import SwiftUI
 
-//struct FractionNotation: View {
-//    var numerator:Int
-//    var denominator:Int
-//
-//    var body: some View {
-//        VStack {
-//            Text("\(numerator)")
-//
-//            Image(systemName: "minus")
-//
-//            Text("\(denominator)")
-//        }
-//    }
-//}
-
-struct StepHeading1: View {
-    var title:String
-    var paddingTop: CGFloat = 24.0
-    
-    var body: some View {
-        VStack{
-            HStack {
-                Text(title)
-                    .font(.system(size: 16, weight: .semibold, design: .rounded))
-                    .foregroundColor(.white)
-                    .padding(.vertical, 8)
-                    .padding(.leading, 40)
-                Spacer()
-            }
-            .frame(maxWidth:.infinity)
-            .background(Color("PurpleLight"))
-            .cornerRadius(9)
-        } .padding(.bottom, 12)
-    }
-}
 
 struct ReviewScreen: View {
     var fractionSolutions:FractionSolutions
