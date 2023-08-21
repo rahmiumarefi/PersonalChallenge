@@ -25,9 +25,9 @@ struct EqualizationResultStepView: View {
             
             
             Spacer()
-               
+                .frame(height: 25)
         }
-        .frame(height: 25)
+        
     }
 }
 

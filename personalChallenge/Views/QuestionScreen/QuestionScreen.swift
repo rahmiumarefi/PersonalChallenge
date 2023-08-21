@@ -169,88 +169,7 @@ struct QuestionScreen: View {
                     
                     if isStepMode {
                         ScrollView {
-                            if !fractionSolutions.isDenominatorEqual{
-                                // stepOneDone -> samakan penyebut
-                                // stepTwoDone -> hasil kali dari samakan penyebut
-                                // stepThreeDone -> hasil jumlah/kurang pecahan dari samakan penyebut
-                                //stepFourDone -> kalau bisa di sederhanakan
-                               
-                                    EqualizationStepView(Soal: $Soal, jawaban: $jawaban, operand: $operand, isDisabledStep1: $isDisabledStep1)
-                                
-                                if stepOneDone {
-                                    EqualizationResultStepView(jawaban: $jawaban, operand: $operand, isDisabledStep2: $isDisabledStep2)
-                                    
-                                }
-                                
-                                if stepTwoDone {
-                                    CalculationStepView(jawaban: $jawaban, operand: $operand, isDisabledStep3: $isDisabledStep3)
-                                }
-                                // nanti disini dicek kalau dia bisa disederhanakan
-                                
-                                if stepThreeDone && fractionSolutions.canBeSimplified {
-                                   
-                                    SimplifyFractionStepView(Soal: $Soal, jawaban: $jawaban, operand: $operand, isDisabledStepSimplify: $isDisabledStepSimplify)
-                                }
-                                if stepSimplify && fractionSolutions.canBeSimplified{
-                                    
-                                    SimplifyResultStepView(jawaban: $jawaban)
-                                }
-                                
-                            }
-                            else{
-                                // kalau dia penyebutnya sama tidak perlu step satu dan dua langsung done aja
-                                // insert nilai numerator
-                                
-                                Group {
-                                    StepHeading(title: "Step 1: hitung pecahan")
-                                        .padding(.horizontal, 32)
-                                    
-                                    Spacer()
-                                    
-                                    Calculation(pembilang1: String(Soal.fractionPair.f1.numerator), penyebut1: String(Soal.fractionPair.f1.denominator), pembilang2: String(Soal.fractionPair.f2.numerator), penyebut2: String(Soal.fractionPair.f2.denominator),pembilang3: $jawaban.numerator3,penyebut3: $jawaban.denominator3,operand: operand,isDisabled:isDisabledStep3,jawaban: jawaban)
-                                        .focused($isFocused)
-                                    Spacer()
-                                        .frame(height: 25)
-                                }
-                                
-                                if stepThreeDone && fractionSolutions.canBeSimplified {
-                                    Group {
-                                        StepHeading(title: "Step 2: Cari hasil pembagi untuk sederhanakan  pecahan")
-                                            .padding(.horizontal, 32)
-                                        
-                                        Spacer ()
-                                        SimplifyFraction(pembilang: $jawaban.numerator3, penyebut: $jawaban.denominator3, pembagi: $jawaban.dibagi,isDisabled: isDisabledStepSimplify,jawaban:jawaban)
-                                            .focused($isFocused)
-                                        
-                                        Spacer()
-                                            .frame(height: 25)
-                                    }
-                                }
-                                if stepSimplify && fractionSolutions.canBeSimplified{
-                                    Group {
-                                        StepHeading(title: "Step 3: Hitung Hasil sederhana")
-                                            .padding(.horizontal, 32)
-                                        
-                                        Spacer ()
-                                        DirectAnswerField(inputJawaban: $jawaban.numerator4)
-                                            .focused($isFocused)
-                                            
-                                        
-                                        Image(systemName: "minus")
-                                            .resizable()
-                                            .frame(width: 48, height: 2)
-                                            .padding(.vertical, 12)
-                                        
-                                        DirectAnswerField(inputJawaban: $jawaban.denominator4)
-                                            .focused($isFocused)
-                                            
-                                        Spacer()
-                                            .frame(height: 25)
-                                    }
-                                }
-                            }
-                            
-                            
+                            StepsAnswerView( fractionSolutions: $fractionSolutions, Soal: $Soal, jawaban: $jawaban, stepOneDone: $stepOneDone, stepTwoDone: $stepTwoDone, stepThreeDone: $stepThreeDone, stepSimplify: $stepSimplify, isDisabledStep1: $isDisabledStep1, isDisabledStep2: $isDisabledStep2, isDisabledStep3: $isDisabledStep3, isDisabledStepSimplify: $isDisabledStepSimplify, operand: $operand)
                         }
                     } else {
                         
@@ -323,11 +242,11 @@ struct QuestionScreen: View {
                                 // sekalian cek kalau dia gabisa di simplified lagi pindah ke review
                                 else if stepTwoDone && !stepThreeDone{
                                     jawaban = checkCalculationFraction(fractionSolutions: fractionSolutions, jawaban: jawaban,isStepMode: isStepMode)
+                                   
                                     if(jawaban.isCheckCalculation){
                                         stepThreeDone = !stepThreeDone
                                         isDisabledStep3.toggle()
-                                        // pindah ke review
-                                        // atau tambah alert lagi??
+                                     
                                         if(!fractionSolutions.canBeSimplified){
                                             isGoToReviewPage.toggle()
                                             print("selesai pindah ke review")

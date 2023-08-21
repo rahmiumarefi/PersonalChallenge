@@ -24,8 +24,9 @@ struct CalculationStepView: View {
                 .focused($isFocused)
             
             Spacer()
+                .frame(height: 25)
         }
-        .frame(height: 25)
+        
     }
 }
 
