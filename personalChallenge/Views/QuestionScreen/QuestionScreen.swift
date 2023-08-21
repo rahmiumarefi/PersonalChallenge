@@ -174,75 +174,26 @@ struct QuestionScreen: View {
                                 // stepTwoDone -> hasil kali dari samakan penyebut
                                 // stepThreeDone -> hasil jumlah/kurang pecahan dari samakan penyebut
                                 //stepFourDone -> kalau bisa di sederhanakan
-                                Group {
-                                    Steps(title: "Step 1: Samakan penyebut")
-                                        .padding(.horizontal, 32)
-
-                                    Spacer()
-
-                                    HStack {
-                                        DenominatorEqualization(fraction: Soal.fractionPair, pengali1: $jawaban.dikali1, pengali2: $jawaban.dikali2,operand: operand,isDisbaled: isDisabledStep1,jawaban:jawaban)
-                                            .focused($isFocused)
-                                    }
-
-                                    Spacer()
-                                        .frame(height: 25)
-
-                                }
+                               
+                                    EqualizationStepView(Soal: $Soal, jawaban: $jawaban, operand: $operand, isDisabledStep1: $isDisabledStep1)
+                                
                                 if stepOneDone {
-                                    Group {
-                                        // jangan lupa ganti nama ya
-                                        //sama disable kalau dia kelar
-                                        Steps(title: "Step 2: Tuliskan hasil persamaan penyebut")
-                                            .padding(.horizontal, 32)
-                                        
-                                        Spacer()
-                                        
-                                        DenominatorEqualizationResult(pembilang1: $jawaban.numerator1, pembilang2: $jawaban.numerator2, penyebut1: $jawaban.denominator1, penyebut2: $jawaban.denominator2,operand:operand,isDisabled:isDisabledStep2,jawaban:jawaban)
-                                            .focused($isFocused)
-                                        Spacer()
-                                            .frame(height: 25)
-                                    }
+                                    EqualizationResultStepView(jawaban: $jawaban, operand: $operand, isDisabledStep2: $isDisabledStep2)
                                     
                                 }
                                 
                                 if stepTwoDone {
                                     CalculationStepView(jawaban: $jawaban, operand: $operand, isDisabledStep3: $isDisabledStep3)
-                                                            }
+                                }
                                 // nanti disini dicek kalau dia bisa disederhanakan
                                 
                                 if stepThreeDone && fractionSolutions.canBeSimplified {
-                                    Group {
-                                        Steps(title: "Step 4: Cari hasil pembagi untuk sederhanakan  pecahan")
-                                            .padding(.horizontal, 32)
-                                        
-                                        Spacer ()
-                                        SimplifyFraction(pembilang: $jawaban.numerator3, penyebut: $jawaban.denominator3, pembagi: $jawaban.dibagi,isDisabled:isDisabledStepSimplify,jawaban:jawaban)
-                                            .focused($isFocused)
-                                        
-                                        Spacer()
-                                            .frame(height: 25)
-                                    }
+                                   
+                                    SimplifyFractionStepView(Soal: $Soal, jawaban: $jawaban, operand: $operand, isDisabledStepSimplify: $isDisabledStepSimplify)
                                 }
                                 if stepSimplify && fractionSolutions.canBeSimplified{
-                                    Group {
-                                        Steps(title: "Step 5: Hitung Hasil sederhana")
-                                            .padding(.horizontal, 32)
-                                        
-                                        Spacer ()
-                                        DirectAnswerField(inputJawaban: $jawaban.numerator4)
-                                            .focused($isFocused)
-                                        
-                                        Image (systemName: "minus")
-                                            .resizable()
-                                            .frame(width: 48, height: 2)
-                                            .padding(.vertical, 12)
-                                        
-                                        DirectAnswerField(inputJawaban: $jawaban.denominator4)
-                                            .focused($isFocused)
-                                        Spacer()
-                                            .frame(height: 25)
-                                    }
+                                    
+                                    SimplifyResultStepView(jawaban: $jawaban)
                                 }
                                 
                             }
@@ -251,7 +202,7 @@ struct QuestionScreen: View {
                                 // insert nilai numerator
                                 
                                 Group {
-                                    Steps(title: "Step 1: hitung pecahan")
+                                    StepHeading(title: "Step 1: hitung pecahan")
                                         .padding(.horizontal, 32)
                                     
                                     Spacer()
@@ -264,7 +215,7 @@ struct QuestionScreen: View {
                                 
                                 if stepThreeDone && fractionSolutions.canBeSimplified {
                                     Group {
-                                        Steps(title: "Step 2: Cari hasil pembagi untuk sederhanakan  pecahan")
+                                        StepHeading(title: "Step 2: Cari hasil pembagi untuk sederhanakan  pecahan")
                                             .padding(.horizontal, 32)
                                         
                                         Spacer ()
@@ -277,7 +228,7 @@ struct QuestionScreen: View {
                                 }
                                 if stepSimplify && fractionSolutions.canBeSimplified{
                                     Group {
-                                        Steps(title: "Step 3: Hitung Hasil sederhana")
+                                        StepHeading(title: "Step 3: Hitung Hasil sederhana")
                                             .padding(.horizontal, 32)
                                         
                                         Spacer ()
@@ -303,20 +254,9 @@ struct QuestionScreen: View {
                         }
                     } else {
                         
-                        Spacer ()
-                        DirectAnswerField(inputJawaban: $jawaban.numerator,isCorrect:jawaban.isNumerator)
+                       DirectAnswerView(jawaban: $jawaban)
                             .focused($isFocused)
                             
-                        
-                        Image (systemName: "minus")
-                            .resizable()
-                            .frame(width: 48, height: 2)
-                            .padding(.vertical, 12)
-                        
-                        DirectAnswerField(inputJawaban: $jawaban.denominator,isCorrect: jawaban.isDenominator)
-                            .focused($isFocused)
-                            
-                        Spacer()
                     }
                     
                     HStack {}.padding(.bottom, keyboardHeight)
@@ -470,7 +410,7 @@ struct QuestionScreen: View {
                                     }
                                 }
                             }
-                        }else{
+                        } else{
                             if fractionSolutions.canBeSimplified{
                                 jawaban = checkFinalAnswerSimplified(fractionSolutions: fractionSolutions, jawaban: jawaban,isStepMode:isStepMode)
                                 if jawaban.isCheckFinalAnswerSimplified{

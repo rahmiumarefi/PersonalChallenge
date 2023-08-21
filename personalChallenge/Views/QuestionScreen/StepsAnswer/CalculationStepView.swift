@@ -15,7 +15,7 @@ struct CalculationStepView: View {
     
     var body: some View {
         VStack {
-            Steps(title: "Step 3: Hitunglah operasi aritmatika pecahan")
+            StepHeading(title: "Step 3: Hitunglah operasi aritmatika pecahan")
                 .padding(.horizontal, 32)
             
             Spacer()
@@ -24,8 +24,8 @@ struct CalculationStepView: View {
                 .focused($isFocused)
             
             Spacer()
-                .frame(height: 25)
         }
+        .frame(height: 25)
     }
 }
 

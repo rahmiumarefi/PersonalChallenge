@@ -13,10 +13,15 @@
 		212BE2FB2A90AD9F00043D50 /* SoalCeritaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212BE2FA2A90AD9F00043D50 /* SoalCeritaModel.swift */; };
 		212BE3022A92620400043D50 /* EqualizationStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212BE3012A92620400043D50 /* EqualizationStepView.swift */; };
 		212BE3042A92649100043D50 /* CalculationStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212BE3032A92649100043D50 /* CalculationStepView.swift */; };
+		212BE30C2A927EF700043D50 /* EqualizationResultStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212BE30B2A927EF700043D50 /* EqualizationResultStepView.swift */; };
+		212BE30E2A9281D100043D50 /* DirectAnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212BE30D2A9281D100043D50 /* DirectAnswerView.swift */; };
+		212BE3132A928A4D00043D50 /* StepsAnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212BE3122A928A4D00043D50 /* StepsAnswerView.swift */; };
+		212BE3152A92F86C00043D50 /* SimplifyFractionStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212BE3142A92F86C00043D50 /* SimplifyFractionStepView.swift */; };
+		212BE3172A92FD0A00043D50 /* SimplifyResultStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212BE3162A92FD0A00043D50 /* SimplifyResultStepView.swift */; };
 		217E9C7A2A89E55900E3D1E3 /* StepsAnswerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217E9C792A89E55900E3D1E3 /* StepsAnswerField.swift */; };
 		217E9C7C2A8A6A5900E3D1E3 /* QuestionScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217E9C7B2A8A6A5900E3D1E3 /* QuestionScreenModel.swift */; };
 		217E9C7E2A8BD1E200E3D1E3 /* DirectAnswerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217E9C7D2A8BD1E200E3D1E3 /* DirectAnswerField.swift */; };
-		217E9C802A8BD2EA00E3D1E3 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217E9C7F2A8BD2EA00E3D1E3 /* Steps.swift */; };
+		217E9C802A8BD2EA00E3D1E3 /* StepHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217E9C7F2A8BD2EA00E3D1E3 /* StepHeading.swift */; };
 		217E9C822A8BD42F00E3D1E3 /* DenominatorEqualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217E9C812A8BD42F00E3D1E3 /* DenominatorEqualization.swift */; };
 		217E9C842A8C696B00E3D1E3 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217E9C832A8C696B00E3D1E3 /* Calculation.swift */; };
 		217E9C862A8C6CA100E3D1E3 /* DenominatorEqualizationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217E9C852A8C6CA100E3D1E3 /* DenominatorEqualizationResult.swift */; };
@@ -54,10 +59,15 @@
 		212BE2FA2A90AD9F00043D50 /* SoalCeritaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoalCeritaModel.swift; sourceTree = "<group>"; };
 		212BE3012A92620400043D50 /* EqualizationStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualizationStepView.swift; sourceTree = "<group>"; };
 		212BE3032A92649100043D50 /* CalculationStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationStepView.swift; sourceTree = "<group>"; };
+		212BE30B2A927EF700043D50 /* EqualizationResultStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualizationResultStepView.swift; sourceTree = "<group>"; };
+		212BE30D2A9281D100043D50 /* DirectAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectAnswerView.swift; sourceTree = "<group>"; };
+		212BE3122A928A4D00043D50 /* StepsAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsAnswerView.swift; sourceTree = "<group>"; };
+		212BE3142A92F86C00043D50 /* SimplifyFractionStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplifyFractionStepView.swift; sourceTree = "<group>"; };
+		212BE3162A92FD0A00043D50 /* SimplifyResultStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplifyResultStepView.swift; sourceTree = "<group>"; };
 		217E9C792A89E55900E3D1E3 /* StepsAnswerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsAnswerField.swift; sourceTree = "<group>"; };
 		217E9C7B2A8A6A5900E3D1E3 /* QuestionScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionScreenModel.swift; sourceTree = "<group>"; };
 		217E9C7D2A8BD1E200E3D1E3 /* DirectAnswerField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectAnswerField.swift; sourceTree = "<group>"; };
-		217E9C7F2A8BD2EA00E3D1E3 /* Steps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
+		217E9C7F2A8BD2EA00E3D1E3 /* StepHeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepHeading.swift; sourceTree = "<group>"; };
 		217E9C812A8BD42F00E3D1E3 /* DenominatorEqualization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenominatorEqualization.swift; sourceTree = "<group>"; };
 		217E9C832A8C696B00E3D1E3 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
 		217E9C852A8C6CA100E3D1E3 /* DenominatorEqualizationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenominatorEqualizationResult.swift; sourceTree = "<group>"; };
@@ -109,13 +119,14 @@
 				21DCD26C2A89260100F55FC8 /* FractionShape.swift */,
 				217E9C7D2A8BD1E200E3D1E3 /* DirectAnswerField.swift */,
 				217E9C792A89E55900E3D1E3 /* StepsAnswerField.swift */,
-				217E9C7F2A8BD2EA00E3D1E3 /* Steps.swift */,
+				217E9C7F2A8BD2EA00E3D1E3 /* StepHeading.swift */,
 				217E9C812A8BD42F00E3D1E3 /* DenominatorEqualization.swift */,
 				217E9C852A8C6CA100E3D1E3 /* DenominatorEqualizationResult.swift */,
 				217E9C832A8C696B00E3D1E3 /* Calculation.swift */,
 				217E9C872A8C6E6100E3D1E3 /* SimplifyFraction.swift */,
-				212BE3012A92620400043D50 /* EqualizationStepView.swift */,
-				212BE3032A92649100043D50 /* CalculationStepView.swift */,
+				212BE3112A92884E00043D50 /* StepsAnswer */,
+				212BE30D2A9281D100043D50 /* DirectAnswerView.swift */,
+				212BE3122A928A4D00043D50 /* StepsAnswerView.swift */,
 			);
 			path = QuestionScreen;
 			sourceTree = "<group>";
@@ -135,6 +146,18 @@
 				217E9C8D2A8E621900E3D1E3 /* ReviewScreen.swift */,
 			);
 			path = ReviewScreen;
+			sourceTree = "<group>";
+		};
+		212BE3112A92884E00043D50 /* StepsAnswer */ = {
+			isa = PBXGroup;
+			children = (
+				212BE3012A92620400043D50 /* EqualizationStepView.swift */,
+				212BE30B2A927EF700043D50 /* EqualizationResultStepView.swift */,
+				212BE3032A92649100043D50 /* CalculationStepView.swift */,
+				212BE3142A92F86C00043D50 /* SimplifyFractionStepView.swift */,
+				212BE3162A92FD0A00043D50 /* SimplifyResultStepView.swift */,
+			);
+			path = StepsAnswer;
 			sourceTree = "<group>";
 		};
 		21DCD2132A83BA3800F55FC8 = {
@@ -287,8 +310,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				212BE30C2A927EF700043D50 /* EqualizationResultStepView.swift in Sources */,
+				212BE30E2A9281D100043D50 /* DirectAnswerView.swift in Sources */,
 				21DCD24B2A85E8EC00F55FC8 /* GenerateSoal.swift in Sources */,
 				217E9C922A8E63EC00E3D1E3 /* SolutionPrintExample.swift in Sources */,
+				212BE3132A928A4D00043D50 /* StepsAnswerView.swift in Sources */,
 				212BE2FB2A90AD9F00043D50 /* SoalCeritaModel.swift in Sources */,
 				21DCD2472A85E7B500F55FC8 /* SettingScreen.swift in Sources */,
 				21DCD2612A891C9C00F55FC8 /* JawabanModel.swift in Sources */,
@@ -301,16 +327,18 @@
 				21DCD2512A85EC7E00F55FC8 /* GenerateFraction.swift in Sources */,
 				217E9C7A2A89E55900E3D1E3 /* StepsAnswerField.swift in Sources */,
 				217E9C7C2A8A6A5900E3D1E3 /* QuestionScreenModel.swift in Sources */,
+				212BE3172A92FD0A00043D50 /* SimplifyResultStepView.swift in Sources */,
 				21DCD2632A891CB200F55FC8 /* QuestionTypeModel.swift in Sources */,
 				212BE2F32A8E6C9D00043D50 /* QuestionScreen.swift in Sources */,
 				21DCD26D2A89260100F55FC8 /* FractionShape.swift in Sources */,
 				21DCD2532A85ED5600F55FC8 /* GenerateStory.swift in Sources */,
 				21DCD24F2A85EC5E00F55FC8 /* GenerateOperand.swift in Sources */,
 				212BE2F72A8E6EC900043D50 /* PublishersExtensions.swift in Sources */,
-				217E9C802A8BD2EA00E3D1E3 /* Steps.swift in Sources */,
+				217E9C802A8BD2EA00E3D1E3 /* StepHeading.swift in Sources */,
 				21DCD2492A85E80A00F55FC8 /* ModeSoal.swift in Sources */,
 				21DCD2652A891DB000F55FC8 /* SoalPecahan.swift in Sources */,
 				217E9C7E2A8BD1E200E3D1E3 /* DirectAnswerField.swift in Sources */,
+				212BE3152A92F86C00043D50 /* SimplifyFractionStepView.swift in Sources */,
 				212BE3022A92620400043D50 /* EqualizationStepView.swift in Sources */,
 				21DCD2552A85ED9300F55FC8 /* GenerateSolutionStep.swift in Sources */,
 				217E9C842A8C696B00E3D1E3 /* Calculation.swift in Sources */,

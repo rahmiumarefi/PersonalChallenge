@@ -228,7 +228,6 @@ struct SolutionsPrintExample: View {
                         StepHeading(title: "Langkah 4: Hasil akhir")
                             .padding(.top, 24)
                         
-//                        FractionNotation(numerator: finalSolution.numerator, denominator: finalSolution.denominator)
                         VStack(spacing: 4) {
                             Text("\((fractionSolutions.steps[3] as! SimplifyProperties).result.numerator)")
                                 .font(.system(size: 20, weight: .semibold, design: .rounded))
@@ -324,7 +323,6 @@ struct SolutionsPrintExample: View {
                         StepHeading(title: "Langkah 3: Hasil akhir")
                             .padding(.top, 24)
                         
-//                        FractionNotation(numerator: finalSolution.numerator, denominator: finalSolution.denominator)
                         VStack(spacing: 4) {
                             Text("\((fractionSolutions.steps[1] as! FinalAnswer).operationResult.numerator)")
                                 .font(.system(size: 20, weight: .semibold, design: .rounded))
@@ -346,7 +344,6 @@ struct SolutionsPrintExample: View {
                         StepHeading(title: "Langkah 3: Hasil akhir")
                             .padding(.top, 24)
                         
-//                        FractionNotation(numerator: finalSolution.numerator, denominator: finalSolution.denominator)
                         VStack(spacing: 4) {
                             Text("\((fractionSolutions.steps[2] as! SimplifyProperties).result.numerator)")
                                 .font(.system(size: 20, weight: .semibold, design: .rounded))
@@ -361,13 +358,9 @@ struct SolutionsPrintExample: View {
                                 .font(.system(size: 20, weight: .semibold, design: .rounded))
                                 .foregroundColor(Color("NavyText"))
                         }
-                        
                     }
-                    
-                    
                 }
             }
-//            .padding(.top, 24)
         }
     }
 }

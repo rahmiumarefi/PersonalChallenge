@@ -18,8 +18,6 @@ struct Calculation: View {
     var isDisabled:Bool = false
     var jawaban:Jawaban
     
-
-    
     var body: some View {
         HStack {
             VStack(spacing: 4) {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Steps: View {
+struct StepHeading: View {
     var title:String
     
     var body: some View {
@@ -32,8 +32,8 @@ struct Steps: View {
     }
 }
 
-struct Steps_Previews: PreviewProvider {
+struct StepHeading_Previews: PreviewProvider {
     static var previews: some View {
-        Steps(title: " ")
+        StepHeading(title: " ")
     }
 }

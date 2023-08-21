@@ -22,10 +22,10 @@ import SwiftUI
 //    }
 //}
 
-struct StepHeading: View {
+struct StepHeading1: View {
     var title:String
     var paddingTop: CGFloat = 24.0
-
+    
     var body: some View {
         VStack{
             HStack {
